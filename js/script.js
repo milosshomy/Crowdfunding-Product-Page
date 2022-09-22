@@ -59,8 +59,6 @@ function calculateCashAndUpdateStats(event) {
 
   result.textContent -= 1;
 
-  //Check issue about numbers on backers content
-
   backers.textContent = backersNumber + 1 / 1000;
 }
 
@@ -87,8 +85,6 @@ function calculateModalCashAndUpdateStats(event, inputNumberValue) {
       .firstElementChild;
 
   desktopResult.textContent -= 1;
-
-  //Check issue about numbers on backers content
 
   backers.textContent = backersNumber + 1 / 1000;
 }
@@ -162,7 +158,7 @@ radioButtons[2].addEventListener("click", () => {
   line[1].classList.add("appear");
 });
 
-//Selecting rewards on modal container updating stats and showing gratitude container on click
+//Selecting rewards on modal container, updating stats and showing gratitude container on click
 
 inputBtn[0].addEventListener("change", (e) => {
   const inputValue = e.target.value;
@@ -204,7 +200,7 @@ gratitudeBtn.addEventListener("click", () => {
   overlay.style.display = "none";
 });
 
-//Updating proggress bar
+//Updating progress bar
 
 function updateProgressBar() {
   progressBarWidth += 10;
