@@ -59,7 +59,11 @@ function calculateCashAndUpdateStats(event) {
 
   result.textContent -= 1;
 
-  backers.textContent = backersNumber + 1 / 1000;
+  const addBacker = backersNumber + 1 / 1000;
+
+  const limitNumber = addBacker.toFixed(3);
+
+  backers.textContent = limitNumber;
 }
 
 function calculateModalCashAndUpdateStats(event, inputNumberValue) {
@@ -86,7 +90,11 @@ function calculateModalCashAndUpdateStats(event, inputNumberValue) {
 
   desktopResult.textContent -= 1;
 
-  backers.textContent = backersNumber + 1 / 1000;
+  const addBacker = backersNumber + 1 / 1000;
+
+  const limitNumber = addBacker.toFixed(3);
+
+  backers.textContent = limitNumber;
 }
 
 primaryBtn[1].addEventListener("click", (e) => {
@@ -158,7 +166,7 @@ radioButtons[2].addEventListener("click", () => {
   line[1].classList.add("appear");
 });
 
-//Selecting rewards on modal container, updating stats and showing gratitude container on click
+//Selecting rewards on modal containerz updating stats and showing gratitude container on click
 
 inputBtn[0].addEventListener("change", (e) => {
   const inputValue = e.target.value;
@@ -200,7 +208,7 @@ gratitudeBtn.addEventListener("click", () => {
   overlay.style.display = "none";
 });
 
-//Updating progress bar
+//Updating proggress bar
 
 function updateProgressBar() {
   progressBarWidth += 10;
