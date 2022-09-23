@@ -199,6 +199,16 @@ inputBtn[1].addEventListener("change", (e) => {
 primaryBtn[4].addEventListener("click", () => {
   modalContainer.classList.remove("show");
   gratitudeContainer.classList.add("show");
+
+  const removeComa = backers.textContent.replace(/,/g, ".");
+
+  const backersNumber = Number(removeComa);
+
+  const addBacker = backersNumber + 1 / 1000;
+
+  const limitNumber = addBacker.toFixed(3);
+
+  backers.textContent = limitNumber;
 });
 
 //Removing gratitude container on click
